@@ -152,7 +152,7 @@ define config.save_directory = "Helenadragonslayers-1694694522"
 ##
 ## O ícone exibido na barra de tarefas ou no dock.
 
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "gui/iconDG.png"
 
 
 ## Configuração de compilação ##################################################

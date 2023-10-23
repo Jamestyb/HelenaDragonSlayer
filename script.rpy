@@ -6,6 +6,7 @@
 define h = Character("Helena", color = "#c71b00")
 define c = Character ("Cavaleiro", color="#424ef5")
 define N = Character("Narrador")
+define d = Character ("desconhecido", color = "#6669")
 
 
 
@@ -185,5 +186,90 @@ label continueFour:
     c "Vai ficar tudo bem, se segure."
 
 
+    "(Galopar de um cavalo )"
+
+    "O animal passa a galopar rapidamente, sacudindo para os lados. Instintivamente você se segura no cavaleiro, que se concentrava no caminho. "
+
+    "Toda trajetória ambos ficavam em silêncio, dava para ouvir somente os cascos do cavalo golpeando os diversos solos adiante. "
+
+    "Passou cerca 40 minutos até você conseguir ver construções humanas feitas a pedregulho e pequenas sustentações de madeiras, aparentemente os arredores eram pastos onde animais caminhavam,"
+    "mas não havia nenhum, somente cercados e poucas pessoas caminhando ao redor. "
+    "Logo mais a frente, uma muralha feita de pedregulho que se estendia até onde sua vista não alcançava mais, havia torres dispersas sobre as muralhas."
+    c "Seja bem-vinda a capital do reino de Luskov."
+
+    "Os portões estavam abertos e com dois guardas de cada lado, com a aproximação do cavaleiro ambos se afastaram e deram espaço dizendo “Tai, Comandante!” Dentro do reino"
+    "era surpreendente de bonito, uma entrada direta para uma fonte d'água com uma estátua com o guerreiro Luskov, um ogro que uniu todas as raças em um único reino"
+
+    "cessando as guerras para se defenderem dos dragões que assolavam todos. O cavalo parou na puxada das rédeas, e então você desceu."
+
+    c "Bem… Acho que não me apresentei devidamente. Me chamo Idhun, Comandante Idhun."
+    c "Vou notificar os demais de sua presença, fique por aqui enquanto isso, não vou demorar muito"
+    c "fique à vontade para explorar envolta, só não vá muito longe. "
+
+    "( Galopar do cavalo curto logo some )"
+
+    "Você observa o arredor, um pouco perdida com sua situação, afinal todos eram desconhecidos, você não tinha muitas opções a não ser esperar pacientemente. "
+    "Apesar de que, o ambiente não  parecia nada hostil, havia crianças correndo e brincando, e por se tratar da capital de seu reino"
+    "poucos elfos, ogros e até mesmo fadas com traços animalescos apareciam, bem diferentes um dos outros"
+    "todos nem davam muita importância, você estava muito bem disfarçada entre os demais. Além da fonte de Luskov"
+    "tinha uma lojinha de carroça a madeira, com uma moça atendendo algumas crianças"
+    "uma árvore próxima a carroça dando uma fuga da luz quente que o sol emitia.  Poucas opções se abrirão a você ao atender sua curiosidade."
+
+    label luskovv:
+    menu:
+        " Aguardar o Cavalheiro abaixo da sombra da árvore  ":
+            jump luskOne
+
+        "  Observar os produtos da lojinha  ":
+            jump luskTwo
+        "se-sentar a beira da fonte ":
+            jump luskFour
+        "Ir mais a fundo do reino":
+            jump luskFive
+
+
+    label luskOne:
+            "Você se aproxima da árvore e se senta escorada no tronco, era reconfortante, mesmo com o rasgo em seu peito pela falta da família, afinal, dragões são considerados criaturas pacíficas que só lutam caso ameaçadas"
+
+            " porque iria ocorrer um ataque coordenado novamente? eram duvidas sem respostas"
+            "que só levariam a mais luto e falta de aceitação, duvidas porem que nao deveriam ser deixadas de lado"
+            " um Elfo negro estava sentado pouco proximo, tambem escorado na mesma arvore, ele lia um livro de capa marrom"
+            "a capa dizia “Encantos e Magias” era de certa forma curioso."
+
+            label luskOneChoose:
+                menu:
+                    " Esse livro… o que ele conta?":
+                        jump luskOneChoosen
+                    "Observar em silêncio":
+                        jump luskOneChoosenSix
+                    return
+
+    label luskOneChoosenFive
+        "O Elfo virou suas atenções para você, seus olhos eram castanhos claro semelhante ao dourado" 
+        "com a expressão confusa porém atenciosa, ele fechou a capa rapidamente e a fitou, consultando em sua rápida memória para formular uma resposta."
+        d "h! ele se trata de contos antigos, magias que os elfos utilizavam no começo do reino, é bem interessante"
+        d "mas não parece de entretenimento, e sim de ensinos, mas eu não sou apto a magia."
+
+
+
+    label luskOneChoosenSix
+        "O Elfo virou suas atenções para você, seus olhos eram castanhos claro semelhante ao dourado" 
+        "com a expressão confusa porém atenciosa, ele fechou a capa rapidamente e a fitou, consultando em sua rápida memória para formular uma resposta."
+        d "h! ele se trata de contos antigos, magias que os elfos utilizavam no começo do reino, é bem interessante"
+        d "mas não parece de entretenimento, e sim de ensinos, mas eu não sou apto a magia."
+
+        
+    label luskOneChoosenSeven
+        d "Claro, pode ficar com ele se quiser, eu não tenho nenhuma utilidade, e o encontrei no chão largado"
+    label luskOneChoosenEight
+        d "Talvez eu consiga aprender algo com ele, o comandante acredita que consigo"
+
+
+
+    label luskOneChoosenOitoEsete
+        "O garoto entregou o livro a você, apenas agradecimentos sinceros poderiam ser trocados pelo livro, mas o rapaz não parecia estar tão interessado em nenhuma “moeda de troca"
+
 return
 
+
+ 
