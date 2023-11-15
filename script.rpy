@@ -8,8 +8,9 @@ define c = Character ("Cavaleiro", color="#424ef5")
 define N = Character("Narrador")
 define d = Character ("desconhecido", color = "#6669")
 
-
-
+image helena normal = "helenaNormal.png"
+image helena treino = "helenaTreino.png"
+image cavaleiro = "cavaleiro.png"
 
 
 # The game starts here.
@@ -96,26 +97,30 @@ label start:
     
 
     label continue:
-        
+        show cavaleiro at right
         c 'Foi … você que derrotou esse dragão … sozinha?'
 
         menu:
             "Sim, eu que o derrotei.": 
+               show helena normal at right
                 h 'Sim, eu que o derrotei.'
                 jump eu_derrotei
 
             "Não, eu só acordei aqui.": 
+               show helena normal at right
                 h 'Não, eu só acordei aqui.'
                 jump acordou
 
             "Eu não sei... estava desacordada.":
+               show helena normal at right
                 h 'Eu não sei... estava desacordada.'
                 jump desacordada
             
 
     label eu_derrotei:
+      show cavaleiro at right
         c "Isso é impressionante… Deixe-me ajudar, tenha calma!"
-
+      hide cavaleiro
         'O cavaleiro se aproximou do cadáver do réptil'
 
         'Subindo pela asa e a ajudando a descer, sua espada continuou cravada nas costas do animal'
@@ -131,7 +136,9 @@ label start:
 
 
     label acordou:
+      show cavaleiro at right
         c "Ah… que estranho, mas você está bem? Venha, eu te ajudo."
+      hide cavaleiro
         " O cavaleiro se aproximou do cadáver do réptil"
         " Subindo pela asa e a ajudando a descer, sua espada continuou cravada nas costas do animal. "
         "Os cavaleiros  ao redor olharam para ti com certo susto pela sua resposta, sussurravam entre si enquanto a encaravam curiosos."
@@ -139,6 +146,7 @@ label start:
     
 
     label desacordada:
+      show cavaleiro at right
         c "Você só.. acordou ai? será que o Arcano te escolheu?"
         jump ChooseTres
     return
@@ -151,21 +159,25 @@ label start:
 label ChooseTres:
     menu:
         "O “Arcano” me escolheu? ":
+            show helena normal at right
             h "O 'Arcano' me escolheu?"
             jump continueFour
 
         " Como assim o “Arcano”? ":
+            show helena normal at right
             h "Como assim o 'Arcano'"
             jump continueFour
         "Eu acho que sim, eu acho… ":
+            show helena normal at right
             h "Eu acho que sim, eu acho..."
             jump continueFour
 
 
 
 label continueTwo:
+   show cavaleiro at right
     c "(em tom entusiasmado) Isso! é bem capaz que um poder maravilhoso protege a sua alma! "
-
+   hide cavaleiro
     "(Plateia aplaudindo )"
 
     "Os cavaleiros ao redor passaram a aplaudir e comemorar. rapidamente, o cavaleiro que antes fez a pergunta"
@@ -182,9 +194,9 @@ label continueFour:
     "Ele te ajudou a subir e em seguida subiu segurando as rédeas do animal, ele se virou para ti"
     
     "com um belo sorriso exposto no rosto."
-
+   show cavaleiro at right
     c "Vai ficar tudo bem, se segure."
-
+   hide cavaleiro
 
     "(Galopar de um cavalo )"
 
@@ -195,17 +207,19 @@ label continueFour:
     "Passou cerca 40 minutos até você conseguir ver construções humanas feitas a pedregulho e pequenas sustentações de madeiras, aparentemente os arredores eram pastos onde animais caminhavam,"
     "mas não havia nenhum, somente cercados e poucas pessoas caminhando ao redor. "
     "Logo mais a frente, uma muralha feita de pedregulho que se estendia até onde sua vista não alcançava mais, havia torres dispersas sobre as muralhas."
+   show cavaleiro at right
     c "Seja bem-vinda a capital do reino de Luskov."
+   hide cavaleiro
 
     "Os portões estavam abertos e com dois guardas de cada lado, com a aproximação do cavaleiro ambos se afastaram e deram espaço dizendo “Tai, Comandante!” Dentro do reino"
     "era surpreendente de bonito, uma entrada direta para uma fonte d'água com uma estátua com o guerreiro Luskov, um ogro que uniu todas as raças em um único reino"
 
     "cessando as guerras para se defenderem dos dragões que assolavam todos. O cavalo parou na puxada das rédeas, e então você desceu."
-
+   show cavaleiro at right
     c "Bem… Acho que não me apresentei devidamente. Me chamo Idhun, Comandante Idhun."
     c "Vou notificar os demais de sua presença, fique por aqui enquanto isso, não vou demorar muito"
     c "fique à vontade para explorar envolta, só não vá muito longe. "
-
+   hide cavaleiro
     "( Galopar do cavalo curto logo some )"
 
     "Você observa o arredor, um pouco perdida com sua situação, afinal todos eram desconhecidos, você não tinha muitas opções a não ser esperar pacientemente. "
